@@ -1,9 +1,22 @@
 package 김영주.simulation;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
+
+// N * N 정사각형 보드
+// 뱀은 맨위 맨좌측(1행 1열)에 위치, 길이는 1
+
+// 구현 순서
+// 1. 몸길이를 늘려 머리를 다음 칸에 위치
+// 2. 벽이나 자기자신의 몸에 부딪히면 게임 끝
+// 3. 이동하는 칸에 사과
+//      있을 때 -> 머리 이동(사과가 없애기) + 꼬리 움직이지 X
+//      없을 때 -> 머리 이동 + 꼬리 움직이기 O
+// 4. 해당 과정을 끝내고 소요 시간 == 방향 변환을 해야하는 시간
+//      D -> 오른쪽으로 90도 회전
+//      L -> 왼쪽으로 90도 회전
+
+// 게임이 몇초에 끝나는지 출력
 
 public class 백준_3190_뱀_반복 {
     static final int[] dx = {-1, 0, 1, 0};
