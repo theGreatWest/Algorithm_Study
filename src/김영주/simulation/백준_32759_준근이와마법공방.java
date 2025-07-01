@@ -1,10 +1,7 @@
 package 김영주.simulation;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class 백준_32759_준근이와마법공방 {
     static final long P = 1000000007; // 모듈로 상수
